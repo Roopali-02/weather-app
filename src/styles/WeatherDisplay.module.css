@@ -1,0 +1,258 @@
+.header{
+  height: 80px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+.appName{
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration:line-through;
+}
+.userLogo{
+  font-size: 30px;
+}
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+.searchInput {
+  flex: 1;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.searchBtn {
+  padding: 10px;
+  cursor: pointer;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+.weatherCard {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.weatherCard div:nth-child(1) {
+  color: #fff;
+  height: 40px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.weatherCard  div:nth-child(2) {
+   background-color: #000;
+   color: #fff;
+   padding: 10px 20px;
+ }
+
+ .temp{
+  font-size: 80px;
+ }
+ .weatherCard div:nth-child(2) img {
+  filter: brightness(0) invert(1);
+ }
+ .tempDescription{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: normal;
+ }
+ .sunInfo {
+   font-size: 20px;
+   display: flex;
+   justify-content: space-between;
+   margin: 15px 0px;
+ }
+ .detailedWeatherCard{
+  background: linear-gradient(to right, #136a8a, #267871);
+  position: relative;
+  width: 100%;
+  max-width: 60%;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #fff;
+ }
+ .heading{
+  font-size: 28px;
+  font-weight: 600;
+  padding:10px 20px;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+ }
+ .feelsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 28px;
+ }
+
+ .feelsContainer span:nth-child(1){
+  font-size: 20px;
+ }
+
+ .feelsLike{
+  font-size: 80px;
+ }
+
+ .statsGridWrapper {
+   display: flex;
+   column-gap: 12px;
+   padding: 12px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ .columnLeft {
+   flex: 1;
+   border-right: 1px solid #ccc;
+   padding-right: 2rem;
+ }
+
+ .columnRight {
+   flex: 1;
+   padding-left: 1rem;
+ }
+ .statRow {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 10px;
+ }
+
+ .statLeft {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+ }
+ .statLeft span:nth-child(1){
+   font-size: 18px;
+ }
+ .statLeft span:nth-child(2) {
+   font-size: 18px;
+ }
+ .statValue {
+   font-weight: 600;
+ }
+ .errorBanner {
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #e52d27, #b31217);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+ }
+ .loaderOverlay {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   background: rgba(255, 255, 255, 0.7);
+   padding: 0.5rem 1rem;
+   border-radius: 5px;
+   font-size: 0.9rem;
+ }
+ .noData {
+   text-align: center;
+   padding: 2rem;
+   font-size: 1.2rem;
+   color: #555;
+   background-color: #f9f9f9;
+   border: 1px dashed #ccc;
+   border-radius: 8px;
+   margin: 1rem;
+   transition: all 0.3s ease;
+ }
+ .sunTime{
+  color: #fc6767;
+  padding-left: 6px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ @media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      gap: 0.25rem;
+      padding: 10px 20px;
+    }
+  
+    .searchInput {
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    .appName {
+      font-size: 24px;
+    }
+  
+    .userLogo {
+      align-self: center;
+    }
+    .mainContainer {
+      flex-direction: column;
+      margin-top: 120px;
+    }
+   .statsGridWrapper {
+     flex-direction: column;
+     padding: 0 20px;
+   }
+
+   .columnLeft,
+   .columnRight {
+     border-right: none;
+     padding-right: 0;
+     padding-left: 0;
+   }
+
+   .weatherCard,.detailedWeatherCard {
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     max-width: 100%;
+   }
+
+   .feelsContainer {
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 0.25rem;
+   }
+
+  .searchWrapper {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .searchInput,
+  .searchBtn {
+    width: 100%;
+  }
+
+ }
